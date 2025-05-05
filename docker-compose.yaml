@@ -1,13 +1,17 @@
 services:
-  postgres_jose:
+  postgres_crud:
+    container_name: postgres_crud
     image: "postgres:14"
     environment:
-      - "POSTGRES_USER=jose"
-      - "POSTGRES_DB=meubanco"
-      - "POSTGRES_PASSWORD=senha123"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_DB=crud"
+      - "POSTGRES_PASSWORD=postgres"
     expose:
       - "5432"
     ports:
       - "5432:5432"
     volumes:
       - ./datas/postgres-data:/var/lib/postgresql/data
+
+
+ 
